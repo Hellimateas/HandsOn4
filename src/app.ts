@@ -8,6 +8,7 @@ import cors from 'cors'
 import { CommonRoutesConfig } from './common/common.routes.config'
 import { UsersRoutes } from './user/user.routes.config'
 import { debug } from 'debug'
+import { PostRoutes } from './post/post.routes.config'
 
 const app: express.Application = express()
 const server: http.Server = http.createServer(app)
@@ -35,6 +36,7 @@ if(!process.env.DEBUG){
 app.use(expressWinston.logger(loggerOptions))
 
 routes.push( new UsersRoutes(app))
+routes.push( new PostRoutes(app))
 
 const runningMessage = `Servidor rondando na porta ${port}`;
 app.get('/', (req: express.Request, res: express.Response) => {
