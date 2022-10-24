@@ -4,4 +4,4 @@
 
 Para Executar o projeto é necessário fazer o download do projeto ou 'git clone' em sua máquina.
 
-`git i`
+`git install`
